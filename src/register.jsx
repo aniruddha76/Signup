@@ -1,20 +1,20 @@
 import React from 'react';
-import { Button, Card, Container, Row, Col, Form } from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import './register.css'
 
 const register = () => {
     return (
         <div className='cont' class="opacity-50">
-            <Container className="d-flex">
+            <Container>
                 <Row>
                     <Col>
                         <div class="col-lg-4 d-flex justify-content-center">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    {/* <div class="card-img pt-2 pb-3"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /> </div> */}
-                                    <div class="name h5">Welcome to our family.</div>
-                                    <div class="testimonial"><form>
-                                        <h3>Sign Up</h3>
+                                    <form>
+                                        <h4>Sign Up
+                                            <br /><small class="text-muted">Welcome to our family.</small>
+                                        </h4>
                                         <div className="mb-3">
                                             <label>First name</label>
                                             <input
@@ -26,6 +26,16 @@ const register = () => {
                                         <div className="mb-3">
                                             <label>Last name</label>
                                             <input type="text" className="form-control" placeholder="Last name" />
+                                        </div>
+                                        <div className="mb-3">
+                                        <lable>Select Department</lable>
+                                            <select className='form-control'>
+                                            <option value="1">IT</option>
+                                            <option value="2">Computer</option>
+                                            <option value="3">Electric</option>
+                                            <option value="3">Electronic</option>
+                                            <option value="3">Instru</option>
+                                            </select>
                                         </div>
                                         <div className="mb-3">
                                             <label>Email address</label>
@@ -41,6 +51,7 @@ const register = () => {
                                                 type="password"
                                                 className="form-control"
                                                 placeholder="Enter password"
+                                                size="8"
                                             />
                                         </div>
                                         <div className="d-grid">
@@ -48,13 +59,13 @@ const register = () => {
                                                 Sign Up
                                             </button>
                                         </div>
-                                        <p className="forgot-password text-right">
+                                        <p className="forgot-password text-center"><hr />
                                             Already registered <a href="/sign-in">sign in?</a>
                                         </p>
                                     </form> </div>
-                                </div>
                             </div>
                         </div>
+                        {/* </div> */}
                     </Col>
                 </Row>
             </Container>
